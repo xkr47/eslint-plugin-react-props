@@ -43,7 +43,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
+* [jsx-no-invalid-props](docs/rules/jsx-no-invalid-props.md): Ensure that PropTypes are valid
 
 
 
