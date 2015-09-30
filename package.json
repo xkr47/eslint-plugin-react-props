@@ -1,0 +1,26 @@
+{
+  "name": "eslint-plugin-react-props",
+  "version": "1.0.0",
+  "description": "a collection of eslint plugins for react prop types",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigbilner/eslint-plugin-react-props.git"
+  },
+  "keywords": [
+    "eslint",
+    "react",
+    "props",
+    "types",
+    "prop-types"
+  ],
+  "author": "Craig Bilner",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/craigbilner/eslint-plugin-react-props/issues"
+  },
+  "homepage": "https://github.com/craigbilner/eslint-plugin-react-props#readme"
+}
