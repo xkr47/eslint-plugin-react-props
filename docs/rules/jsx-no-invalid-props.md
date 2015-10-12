@@ -1,6 +1,6 @@
 # JSX No invalid props (jsx-no-invalid-props)
 
-A quick check to see if a typo has been made on a PropType which can be at the minimum be annoying but also lead to debugging red herrings
+A quick check to see if a typo has been made on a PropType which can at the minimum be annoying but also lead to debugging red herrings
 
 ## Rule Details
 
