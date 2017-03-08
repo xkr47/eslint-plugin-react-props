@@ -31,6 +31,16 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         },
       },
     },
+    {
+      code: fs.readFileSync(path.join(__dirname, 'jsx-no-invalid-props', 'ignored-1.js'), 'utf-8'),
+      parserOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
   ],
   invalid: [
     {
