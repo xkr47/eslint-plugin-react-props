@@ -57,11 +57,13 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         'ad: PropTypes.shape',
         '};'
       ].join('\n'),
-      ecmaFeatures: {
-        jsx: true,
-        modules: true,
-        classes: true
-      }
+      parserOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     }
   ],
   invalid: [
@@ -83,10 +85,12 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         'a: PropTypes.arr,',
         '};'
       ].join('\n'),
-      ecmaFeatures: {
-        jsx: true,
-        modules: true,
-        classes: true
+      parserOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
       errors: [{
         message: 'arr is not a valid PropType',
@@ -113,10 +117,12 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         'a: PropTypes,',
         '};'
       ].join('\n'),
-      ecmaFeatures: {
-        jsx: true,
-        modules: true,
-        classes: true
+      parserOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
       errors: [{
         message: 'unknown use of PropTypes',

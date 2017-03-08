@@ -1,5 +1,7 @@
 # eslint-plugin-react-props
 
+[![CircleCI](https://circleci.com/gh/craigbilner/eslint-plugin-react-props.svg?style=svg)](https://circleci.com/gh/craigbilner/eslint-plugin-react-props)
+
 a collection of prop type rules
 
 ## Installation
