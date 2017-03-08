@@ -1,6 +1,6 @@
 # JSX No invalid props (jsx-no-invalid-props)
 
-Validates all `x.propTypes = { ... }` statements for proper syntax.
+Validates all `x.propTypes = { ... }` and `x.contextTypes = { ... }` statements for proper syntax (also as class members).
 
 ## Rule Details
 

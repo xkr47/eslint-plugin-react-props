@@ -399,5 +399,23 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         },
       ],
     },
+    {
+      code: fs.readFileSync(path.join(__dirname, 'jsx-no-invalid-props', 'invalid-5.js'), 'utf-8'),
+      parserOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      errors: [
+        {
+          message: 'property \'b\': unknown use of PropTypes',
+          line: 8,
+          column: 6,
+          type: 'Identifier',
+        },
+      ],
+    },
   ],
 });
