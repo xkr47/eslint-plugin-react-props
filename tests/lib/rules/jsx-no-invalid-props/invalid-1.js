@@ -1,4 +1,9 @@
-var React = require("react");
+/* eslint import/no-extraneous-dependencies: "off", import/no-unresolved: "off" */
+
+const React = require('react');
+
+const MyComponent = {};
+
 /*
  The content below this comment is loosely based on one of the examples from the below url:
  https://github.com/facebook/react/blob/bc86ac4380/docs/docs/typechecking-with-proptypes.md
@@ -9,18 +14,18 @@ MyComponent.propTypes = {
   badBool: React.PropTypes.boolean,
   badFunc: React.PropTypes.function,
   badUnknown: React.PropTypes.unknown,
-  badMessage: React.PropTypes.instanceOf("Object"),
+  badMessage: React.PropTypes.instanceOf('Object'),
   badEnum: React.PropTypes.oneOf([React]),
   badUnion: React.PropTypes.oneOfType([
-                                        React.PropTypes.string.isRequired,
-                                        React.PropTypes.number.isRequired,
-                                      ]),
-  badArrayOf: React.PropTypes.arrayOf("Array"),
-  badObjectOf: React.PropTypes.objectOf("Object"),
+    React.PropTypes.string.isRequired,
+    React.PropTypes.number.isRequired,
+  ]),
+  badArrayOf: React.PropTypes.arrayOf('Array'),
+  badObjectOf: React.PropTypes.objectOf('Object'),
   badObjectWithShape: React.PropTypes.shape({
-                                              color: "lol",
-                                              fontSize: 5
-                                            }),
+    color: 'lol',
+    fontSize: 5,
+  }),
 
   nonFuncArray: React.PropTypes.array(),
   nonFuncBool: React.PropTypes.bool(),
@@ -40,12 +45,12 @@ MyComponent.propTypes = {
   missingArgObjectOf: React.PropTypes.objectOf(),
   missingArgObjectWithShape: React.PropTypes.shape(),
 
-  tooManyArgMessage: React.PropTypes.instanceOf("",""),
-  tooManyArgEnum: React.PropTypes.oneOf("",""),
-  tooManyArgUnion: React.PropTypes.oneOfType("",""),
-  tooManyArgArrayOf: React.PropTypes.arrayOf("",""),
-  tooManyArgObjectOf: React.PropTypes.objectOf("",""),
-  tooManyArgObjectWithShape: React.PropTypes.shape("",""),
+  tooManyArgMessage: React.PropTypes.instanceOf('', ''),
+  tooManyArgEnum: React.PropTypes.oneOf('', ''),
+  tooManyArgUnion: React.PropTypes.oneOfType('', ''),
+  tooManyArgArrayOf: React.PropTypes.arrayOf('', ''),
+  tooManyArgObjectOf: React.PropTypes.objectOf('', ''),
+  tooManyArgObjectWithShape: React.PropTypes.shape('', ''),
 
   badArgMessage: React.PropTypes.instanceOf({}),
   badArgEnum: React.PropTypes.oneOf({}),

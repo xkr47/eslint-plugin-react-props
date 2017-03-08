@@ -1,6 +1,15 @@
-var React = require("react");
+/* eslint import/no-extraneous-dependencies: "off", import/no-unresolved: "off", indent: "off" */
+/* eslint comma-dangle: "off", consistent-return: "off", prefer-arrow-callback: "off" */
+/* eslint func-names: "off", object-shorthand: "off", prefer-template: "off", max-len: "off" */
+
+const React = require('react');
+
+const MyComponent = {};
+const Message = {};
+
 /*
- The content below this comment is a copy of one of the examples from the below url, with whitespace changes only:
+ The content below this comment is a copy of one of the examples from the below url, with
+ whitespace changes only:
  https://github.com/facebook/react/blob/bc86ac4380/docs/docs/typechecking-with-proptypes.md
  .. which is licensed under https://creativecommons.org/licenses/by/4.0/
  */
