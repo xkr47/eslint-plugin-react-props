@@ -13,7 +13,8 @@
   "author": "Craig",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node tests/lib/index.js"
+    "lint": "eslint 'tests/**/*.js' 'lib/**/*.js'",
+    "test": "npm run lint && node tests/lib/index.js"
   },
   "engines": {
     "node": ">=6.10.0"
@@ -25,6 +26,8 @@
   },
   "dependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.17.1"
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0"
   }
 }

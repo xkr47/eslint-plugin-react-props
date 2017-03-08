@@ -2,11 +2,10 @@
 
 require('babel-eslint');
 
-var rule = require('../../../lib/rules/jsx-no-invalid-props');
-var RuleTester = require('eslint').RuleTester;
-var ruleTester = new RuleTester();
+const rule = require('../../../lib/rules/jsx-no-invalid-props');
+const RuleTester = require('eslint').RuleTester;
 
-var ANY_ERROR_MESSAGE = 'Check your prop types';
+const ruleTester = new RuleTester();
 
 ruleTester.run('jsx-no-invalid-props', rule, {
   valid: [
@@ -55,7 +54,7 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         'ab: PropTypes.oneOf,',
         'ac: PropTypes.oneOfType,',
         'ad: PropTypes.shape',
-        '};'
+        '};',
       ].join('\n'),
       parserOptions: {
         ecmaVersion: 6,
@@ -64,7 +63,7 @@ ruleTester.run('jsx-no-invalid-props', rule, {
           jsx: true,
         },
       },
-    }
+    },
   ],
   invalid: [
     {
@@ -83,7 +82,7 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         '}',
         'TestComponent.propTypes = {',
         'a: PropTypes.arr,',
-        '};'
+        '};',
       ].join('\n'),
       parserOptions: {
         ecmaVersion: 6,
@@ -92,12 +91,14 @@ ruleTester.run('jsx-no-invalid-props', rule, {
           jsx: true,
         },
       },
-      errors: [{
-        message: 'arr is not a valid PropType',
-        line: 14,
-        column: 1,
-        type: 'Property'
-      }]
+      errors: [
+        {
+          message: 'arr is not a valid PropType',
+          line: 14,
+          column: 1,
+          type: 'Property',
+        },
+      ],
     },
     {
       code: [
@@ -115,7 +116,7 @@ ruleTester.run('jsx-no-invalid-props', rule, {
         '}',
         'TestComponent.propTypes = {',
         'a: PropTypes,',
-        '};'
+        '};',
       ].join('\n'),
       parserOptions: {
         ecmaVersion: 6,
@@ -124,12 +125,14 @@ ruleTester.run('jsx-no-invalid-props', rule, {
           jsx: true,
         },
       },
-      errors: [{
-        message: 'unknown use of PropTypes',
-        line: 14,
-        column: 1,
-        type: 'Property'
-      }]
-    }
-  ]
+      errors: [
+        {
+          message: 'unknown use of PropTypes',
+          line: 14,
+          column: 1,
+          type: 'Property',
+        },
+      ],
+    },
+  ],
 });
